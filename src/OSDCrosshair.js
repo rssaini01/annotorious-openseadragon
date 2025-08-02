@@ -1,4 +1,4 @@
-import { SVG_NAMESPACE } from '@recogito/annotorious/src/util/SVG';
+import { SVG_NAMESPACE } from '@rssaini01/annotorious/src/util/SVG';
 
 export default class Crosshair {
 

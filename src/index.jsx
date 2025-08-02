@@ -9,7 +9,7 @@ import {
   setLocale
 } from '@recogito/recogito-client-core';
 
-import '@recogito/annotorious/src/ImageAnnotator.scss';
+import '@rssaini01/annotorious/src/ImageAnnotator.scss';
 import '@recogito/recogito-client-core/themes/default';
 import './OpenSeadragonAnnotator.scss';
 
@@ -244,8 +244,8 @@ class OSDAnnotorious {
   setDrawingEnabled = enable =>
     this._app.current.setDrawingEnabled(enable);
 
-  setDrawingTool = shape =>
-    this._app.current.setDrawingTool(shape);
+  setDrawingTool = (shape, options = {}) =>
+    this._app.current.setDrawingTool(shape, options);
 
   setServerTime = timestamp => 
     this._env.setServerTime(timestamp);

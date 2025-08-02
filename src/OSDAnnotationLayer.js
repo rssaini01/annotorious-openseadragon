@@ -1,10 +1,10 @@
 import EventEmitter from 'tiny-emitter';
 import OpenSeadragon from 'openseadragon';
-import { SVG_NAMESPACE, addClass, hasClass, removeClass } from '@recogito/annotorious/src/util/SVG';
-import DrawingTools from '@recogito/annotorious/src/tools/ToolsRegistry';
-import { drawShape } from '@recogito/annotorious/src/selectors';
-import { format } from '@recogito/annotorious/src/util/Formatting';
-import { isTouchDevice, enableTouchTranslation } from '@recogito/annotorious/src/util/Touch';
+import { SVG_NAMESPACE, addClass, hasClass, removeClass } from '@rssaini01/annotorious/src/util/SVG';
+import DrawingTools from '@rssaini01/annotorious/src/tools/ToolsRegistry';
+import { drawShape } from '@rssaini01/annotorious/src/selectors';
+import { format } from '@rssaini01/annotorious/src/util/Formatting';
+import { isTouchDevice, enableTouchTranslation } from '@rssaini01/annotorious/src/util/Touch';
 import Crosshair from './OSDCrosshair';
 import AnnotationStore from './AnnotationStore';
 import { getSnippet } from './util/ImageSnippet';
@@ -753,10 +753,10 @@ export class AnnotationLayer extends EventEmitter {
     }
   }
 
-  setDrawingTool = shape => {
+  setDrawingTool = (shape, options = {}) => {
     if (this.tools) {
       this.tools.current?.stop();
-      this.tools.setCurrent(shape);
+      this.tools.setCurrent(shape, options);
     }
   }
 

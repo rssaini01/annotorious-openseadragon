@@ -1,4 +1,4 @@
-import { hasClass } from '@recogito/annotorious/src/util/SVG';
+import { hasClass } from '@rssaini01/annotorious/src/util/SVG';
 import OpenSeadragon from 'openseadragon';
 
 export const getSnippet = (viewer, element) => {
